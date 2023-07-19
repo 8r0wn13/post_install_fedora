@@ -22,20 +22,23 @@ sudo pip3 install -y sqlmap
 sqlmap --version
 
 # Install Hamsket
-sudo dnf install -y npm && git clone https://github.com/TheGoddessInari/hamsket.git
-cd hamsket && npm install && npm start && cd ..
+wget https://master.dl.sourceforge.net/project/hamsket/0.6.3/Hamsket-0.6.3.AppImage?viasf=1
+sudo chmod +x ./Downloads/Hamsket-0.6.3.AppImage
+sudo ./Downloads/AppImage
+#sudo dnf install -y npm && git clone https://github.com/TheGoddessInari/hamsket.git
+#cd hamsket && npm install && npm start && cd ..
 hamsket --version
-rm -rf hamsket
+rm -rf ./Downloads/Hamsket-0.6.3.AppImage
 
 # Install insync
 wget https://cdn.insynchq.com/builds/linux/insync-3.8.6.50504-fc38.x86_64.rpm
 sudo dnf install -y ./insync-3.8.6.50504-fc38.x86_64.rpm
-insync --version
+insync version
 rm -rf insync-3.8.6.50504-fc38.x86_64.rpm
 
 # Install ZAP
 wget https://github.com/zaproxy/zaproxy/releases/download/v2.13.0/ZAP_2_13_0_unix.sh
-sudo chmod +x ZAP_2_13_0_unix.sh && ./ZAP_2_13_0_unix.sh
+sudo chmod +x ZAP_2_13_0_unix.sh && sudo ./ZAP_2_13_0_unix.sh
 rm -rf ZAP_2_13_0_unix.sh
 
 # Install Visual Studio Code
