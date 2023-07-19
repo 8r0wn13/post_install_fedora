@@ -21,7 +21,8 @@ sqlmap --version
 
 # Install Hamsket
 sudo dnf install npm -y && git clone https://github.com/TheGoddessInari/hamsket.git
-cd hamsket && npm install && npm run repack:win64 && cd ..
+cd hamsket && npm install && npm start && cd ..
+hamsket --version
 rm -rf hamsket
 
 # Install insync
