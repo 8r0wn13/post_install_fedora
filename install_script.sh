@@ -3,7 +3,7 @@
 cd ..
 
 # Update packages
-sudo dnf update
+sudo dnf upgrade
 
 # Install packages from repository
 sudo dnf -y install wireshark wfuzz terminator skrooge hydra john nmap aria2 btop ffuf flameshot -y
