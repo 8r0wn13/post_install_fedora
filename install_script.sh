@@ -20,7 +20,7 @@ sudo pip3 install -y sqlmap
 sqlmap --version
 
 # Install Hamsket
-dnf install npm -y && git clone https://github.com/TheGoddessInari/hamsket.git
+sudo dnf install npm -y && git clone https://github.com/TheGoddessInari/hamsket.git
 cd hamsket && npm install && npm run repack:win64 && cd ..
 rm -rf hamsket
 
