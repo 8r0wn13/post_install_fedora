@@ -51,14 +51,9 @@ rm -rf MullvadVPN-2023.4_x86_64.rpm
 # Install Slimbook Battery
 git clone https://github.com/Slimbook-Team/slimbookbattery.git && cd slimbookbattery && sudo ./deploy.sh && cd .. && slimbookbattery && rm -rf slimbookbattery
 
-# Install smake for printer drivers
-#wget https://sourceforge.net/projects/s-make/files/smake-1.2.5.tar.bz2/download#
-#mv smake* smake.tar.bz2 && tar -xf smake.tar.bz2 && cd smake-1.2.5
-#cp Gmake.linux /usr/bin/Gmake && sudo dnf install make -y && make
-
 # Install printer drivers
-#wget https://download.support.xerox.com/pub/drivers/DT100_CP/other/wins2003/en/cdrtools-2.00.3.tar.gz
-#tar -xf cdrtools-2.00.3.tar.gz && cd cdrtools-2.00.3 && smake
+# Download the rpm file from https://github.com/8r0wn13/post_install_fedora/
+# sudo dnf install -y ./fuji-xerox-docuprint-c525-a-ap-1.0-3.i386.rpm
 
 # Install Burp
 # Needs to be installed manually
