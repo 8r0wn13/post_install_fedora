@@ -52,8 +52,7 @@ rm -rf MullvadVPN-2023.4_x86_64.rpm
 git clone https://github.com/Slimbook-Team/slimbookbattery.git && cd slimbookbattery && sudo ./deploy.sh && cd .. && slimbookbattery && rm -rf slimbookbattery
 
 # Install printer drivers
-# Download the rpm file from https://github.com/8r0wn13/post_install_fedora/
-# sudo dnf install -y ./fuji-xerox-docuprint-c525-a-ap-1.0-3.i386.rpm
+git clone https://github.com/8r0wn13/post_install_fedora.git && cd post_install_fedora && sudo dnf install -y ./fuji-xerox-docuprint-c525-a-ap-1.0-3.i386.rpm && cd .. && rm -rf post_install_fedora
 
 # Install Burp
 # Needs to be installed manually
