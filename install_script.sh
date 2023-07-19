@@ -3,7 +3,7 @@
 cd ..
 
 # Update packages
-sudo dnf upgrade
+sudo dnf upgrade -y
 
 # Install packages from repository
 sudo dnf -y install wireshark wfuzz terminator skrooge hydra john nmap aria2 btop ffuf flameshot -y
@@ -18,16 +18,15 @@ vlc --version
 # Install sqlmap
 sudo dnf install -y python3
 sudo dnf install -y python3-pip
-sudo pip3 install -y sqlmap
+sudo pip3 install sqlmap
 sqlmap --version
 
 # Install Hamsket
-wget https://master.dl.sourceforge.net/project/hamsket/0.6.3/Hamsket-0.6.3.AppImage?viasf=1
-sudo chmod +x ./Downloads/Hamsket-0.6.3.AppImage
-sudo ./Downloads/AppImage
+wget https://master.dl.sourceforge.net/project/hamsket/0.6.3/Hamsket-0.6.3.AppImage
+sudo chmod +x Hamsket-0.6.3.AppImage
+./Hamsket-0.6.3.AppImage &
 #sudo dnf install -y npm && git clone https://github.com/TheGoddessInari/hamsket.git
 #cd hamsket && npm install && npm start && cd ..
-hamsket --version
 rm -rf ./Downloads/Hamsket-0.6.3.AppImage
 
 # Install insync
