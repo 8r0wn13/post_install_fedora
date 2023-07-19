@@ -6,13 +6,13 @@ cd ..
 sudo dnf update
 
 # Install packages from repository
-sudo dnf install wireshark wfuzz terminator skrooge hydra john nmap aria2 btop ffuf flameshot -y
+sudo dnf -y install wireshark wfuzz terminator skrooge hydra john nmap aria2 btop ffuf flameshot -y
 
 # Install VLC
-sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf install vlc
-sudo dnf install python-vlc
+sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install -y vlc
+sudo dnf install -y python-vlc
 vlc --version
 
 # Install sqlmap
@@ -22,14 +22,14 @@ sudo pip3 install -y sqlmap
 sqlmap --version
 
 # Install Hamsket
-sudo dnf install npm -y && git clone https://github.com/TheGoddessInari/hamsket.git
+sudo dnf install -y npm && git clone https://github.com/TheGoddessInari/hamsket.git
 cd hamsket && npm install && npm start && cd ..
 hamsket --version
 rm -rf hamsket
 
 # Install insync
 wget https://cdn.insynchq.com/builds/linux/insync-3.8.6.50504-fc38.x86_64.rpm
-dnf install -y ./insync-3.8.6.50504-fc38.x86_64.rpm
+sudo dnf install -y ./insync-3.8.6.50504-fc38.x86_64.rpm
 insync --version
 rm -rf insync-3.8.6.50504-fc38.x86_64.rpm
 
