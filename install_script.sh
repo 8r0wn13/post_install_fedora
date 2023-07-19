@@ -43,18 +43,18 @@ wget https://az764295.vo.msecnd.net/stable/74f6148eb9ea00507ec113ec51c489d6ffb4b
 sudo dnf install -y code-1.80.1-1689183644.el7.x86_64.rpm
 rm -rf code-1.80.1-1689183644.el7.x86_64.rpm
 
+# Install Slimbook Battery
+git clone https://github.com/Slimbook-Team/slimbookbattery.git && cd slimbookbattery && sudo ./deploy.sh && cd .. && slimbookbattery && rm -rf slimbookbattery
+
+# Install printer drivers
+cd post_install_fedora && sudo dnf install -y ./fuji-xerox-docuprint-c525-a-ap-1.0-3.i386.rpm && cd .. && rm -rf post_install_fedora
+
 # Install Mullvad
 wget --content-disposition https://mullvad.net/download/app/rpm/latest
 sudo dnf install -y ./MullvadVPN-2023.4_x86_64.rpm
 mullvad version
 mullvad connect
 rm -rf MullvadVPN-2023.4_x86_64.rpm
-
-# Install Slimbook Battery
-git clone https://github.com/Slimbook-Team/slimbookbattery.git && cd slimbookbattery && sudo ./deploy.sh && cd .. && slimbookbattery && rm -rf slimbookbattery
-
-# Install printer drivers
-cd post_install_fedora && sudo dnf install -y ./fuji-xerox-docuprint-c525-a-ap-1.0-3.i386.rpm && cd .. && rm -rf post_install_fedora
 
 # Install Burp
 # Needs to be installed manually
