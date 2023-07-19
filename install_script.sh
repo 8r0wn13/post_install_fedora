@@ -3,6 +3,7 @@
 cd ..
 
 # Update packages
+sudo dnf upgrade --refresh
 sudo dnf upgrade -y
 
 # Install packages from repository
@@ -41,9 +42,12 @@ sudo chmod +x ZAP_2_13_0_unix.sh && sudo ./ZAP_2_13_0_unix.sh
 rm -rf ZAP_2_13_0_unix.sh
 
 # Install Visual Studio Code
-wget https://az764295.vo.msecnd.net/stable/74f6148eb9ea00507ec113ec51c489d6ffb4b771/code-1.80.1-1689183644.el7.x86_64.rpm
-sudo dnf install -y code-1.80.1-1689183644.el7.x86_64.rpm
-rm -rf code-1.80.1-1689183644.el7.x86_64.rpm
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+printf "[vscode]\nname=packages.microsoft.com\nbaseurl=https://packages.microsoft.com/yumrepos/vscode/\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nmetadata_expire=1h" | sudo tee -a /etc/yum.repos.d/vscode.repo
+sudo dnf install code -y
+#wget https://az764295.vo.msecnd.net/stable/74f6148eb9ea00507ec113ec51c489d6ffb4b771/code-1.80.1-1689183644.el7.x86_64.rpm
+#sudo dnf install -y code-1.80.1-1689183644.el7.x86_64.rpm
+#rm -rf code-1.80.1-1689183644.el7.x86_64.rpm
 
 # Install Slimbook Battery
 git clone https://github.com/Slimbook-Team/slimbookbattery.git && cd slimbookbattery && sudo ./deploy.sh && cd .. && slimbookbattery && rm -rf slimbookbattery
