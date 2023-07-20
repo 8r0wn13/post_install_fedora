@@ -56,7 +56,5 @@ wget --content-disposition https://mullvad.net/download/app/rpm/latest
 sudo dnf install -y ./MullvadVPN-2023.4_x86_64.rpm
 mullvad version
 
-./Hamsket-0.6.3.AppImage &
-
 # Install Burp
 # Needs to be installed manually
