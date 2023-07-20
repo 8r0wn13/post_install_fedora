@@ -19,7 +19,7 @@ vlc --version
 # Install sqlmap
 sudo dnf install python3 -y
 sudo dnf install python3-pip -y
-python3 -m pip3 install sqlmap
+python3 -m pip install sqlmap
 sqlmap --version
 
 # Install Hamsket
