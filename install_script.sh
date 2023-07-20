@@ -19,12 +19,13 @@ vlc --version
 # Install sqlmap
 sudo dnf install python3 -y
 sudo dnf install python3-pip -y
-pip3 install sqlmap
+python3 -m pip3 install sqlmap
 sqlmap --version
 
 # Install Hamsket
-wget https://master.dl.sourceforge.net/project/hamsket/0.6.3/Hamsket-0.6.3.AppImage
-sudo chmod +x Hamsket-0.6.3.AppImage
+
+#wget https://master.dl.sourceforge.net/project/hamsket/0.6.3/Hamsket-0.6.3.AppImage
+#sudo chmod +x Hamsket-0.6.3.AppImage
 
 # Install insync
 wget https://cdn.insynchq.com/builds/linux/insync-3.8.6.50504-fc38.x86_64.rpm
@@ -46,6 +47,7 @@ sudo dnf install code -y
 #rm -rf code-1.80.1-1689183644.el7.x86_64.rpm
 
 # Install Slimbook Battery
+sudo dnf install tlp tlp-rdw libnotify-bin cron gobject-introspection libindicator-gtk3 libappindicator-gtk3 -y
 git clone https://github.com/Slimbook-Team/slimbookbattery.git && cd slimbookbattery && sudo ./deploy.sh && cd .. && slimbookbattery && rm -rf slimbookbattery
 
 # Install printer drivers
