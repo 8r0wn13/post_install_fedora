@@ -3,7 +3,7 @@
 cd ..
 
 # Update packages
-sudo dnf upgrade --refresh
+sudo dnf upgrade --refresh -y
 sudo dnf upgrade -y
 
 # Install packages from repository
