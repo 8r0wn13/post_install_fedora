@@ -23,7 +23,7 @@ python3 -m pip3 install sqlmap
 sqlmap --version
 
 # Install Hamsket
-wget https://github.com/TheGoddessInari/hamsket/releases/download/nightly/Hamsket-0.6.5.x86_64.rpm && sudo dnf install ./Hamsket*.rpm
+wget https://github.com/TheGoddessInari/hamsket/releases/download/nightly/Hamsket-0.6.5.x86_64.rpm && sudo dnf install ./Hamsket*.rpm -y
 
 # Install insync
 wget https://cdn.insynchq.com/builds/linux/insync-3.8.6.50504-fc38.x86_64.rpm
