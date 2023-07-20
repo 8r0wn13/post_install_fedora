@@ -23,9 +23,7 @@ python3 -m pip3 install sqlmap
 sqlmap --version
 
 # Install Hamsket
-
-#wget https://master.dl.sourceforge.net/project/hamsket/0.6.3/Hamsket-0.6.3.AppImage
-#sudo chmod +x Hamsket-0.6.3.AppImage
+wget https://github.com/TheGoddessInari/hamsket/releases/download/nightly/Hamsket-0.6.5.x86_64.rpm && sudo dnf install ./Hamsket*.rpm
 
 # Install insync
 wget https://cdn.insynchq.com/builds/linux/insync-3.8.6.50504-fc38.x86_64.rpm
@@ -46,9 +44,8 @@ sudo dnf install code -y
 #sudo dnf install -y code-1.80.1-1689183644.el7.x86_64.rpm
 #rm -rf code-1.80.1-1689183644.el7.x86_64.rpm
 
-# Install Slimbook Battery
-sudo dnf install tlp tlp-rdw libnotify-bin cron gobject-introspection libindicator-gtk3 libappindicator-gtk3 -y
-git clone https://github.com/Slimbook-Team/slimbookbattery.git && cd slimbookbattery && sudo ./deploy.sh && cd .. && slimbookbattery && rm -rf slimbookbattery
+# Install Slimbook Battery - libnotify-bin is not available for Fedora
+#git clone https://github.com/Slimbook-Team/slimbookbattery.git && cd slimbookbattery && sudo ./deploy.sh && cd .. && slimbookbattery && rm -rf slimbookbattery
 
 # Install printer drivers
 cd post_install_fedora && sudo dnf install ./fuji-xerox-docuprint-c525-a-ap-1.0-3.i386.rpm -y && cd .. && rm -rf post_install_fedora
